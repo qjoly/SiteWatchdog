@@ -1,13 +1,13 @@
 name: "SiteWatchDog"
-description: Yes"
+description: "Simple site watchdog for your README"
 author: "Quentin JOLY"
-# inputs:
-#   myInput:
-#     description: "Input to use"
-#     default: "world"
-# outputs:
-#   myOutput:
-#     description: "Output from the action"
+inputs:
+  README_TEMPLATE_PATH:
+    description: "Path to the README template"
+    default: "./README.md.tmpl"
+  SITES_YAML_PATH:
+    description: "Path to the sites.yaml"
+    default: "./sites.yaml"
 runs:
   using: "docker"
   image: "Dockerfile"
