@@ -11,9 +11,9 @@ jobs:
 
       - name: Check If file are modified
         run: |
-          ls -lah
-          cat README.md
+          git add README.md
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git config user.name "GitHub Actions[Bot]"
+          git commit -m "[BOT] Update README.md"
+          git push
 
-      # - name: Check outputs
-      #   run: |
-      #     test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
