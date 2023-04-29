@@ -29,7 +29,7 @@ type SiteStatus struct {
 
 func main() {
 	// Load configuration from YAML file
-	config, err := loadConfig("sites.yaml")
+	config, err := loadConfig(getEnv("SITES_YAML_PATH", "./sites.yaml"))
 	if err != nil {
 		log.Fatalf("Failed to load configuration: %s", err)
 	}
@@ -49,7 +49,8 @@ func main() {
 	}
 
 	// Write result to markdown file
-	err = writeMarkdown("README.md", "README.md.tmpl", statuses)
+	templatePath := getEnv("README_TEMPLATE_PATH", "./README.md.tmpl")
+	err = writeMarkdown("README.md", templatePath, statuses)
 	if err != nil {
 		log.Fatalf("Failed to write output file: %s", err)
 	}
@@ -61,6 +62,13 @@ func main() {
 			fmt.Printf("%s: %s\n", status.Name, status.Status)
 		}
 	}
+}
+
+func getEnv(key, fallback string) string {
+	if value, ok := os.LookupEnv(key); ok {
+		return value
+	}
+	return fallback
 }
 
 func loadConfig(filename string) (*Config, error) {
