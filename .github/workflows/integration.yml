@@ -8,9 +8,8 @@ jobs:
 
       - name: Self test
         id: selftest
-        # Put your action repo here
         uses: qjoly/SiteWatchdog@main
 
-      - name: Check outputs
-        run: |
-          test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
+      # - name: Check outputs
+      #   run: |
+      #     test "${{ steps.selftest.outputs.myOutput }}" == "Hello world"
