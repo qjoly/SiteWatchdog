@@ -7,7 +7,7 @@ Workflows have read and write permissions in the repository for all scopes.
 
 | Website | Status |
 | ------- | ------ |
-{{ range . }}
+{{- range . }}
 | [{{ .Name }}]({{ .URL }}) | {{ .Status }} |
-{{ end }}
+{{- end -}}
 
