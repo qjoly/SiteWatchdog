@@ -21,6 +21,12 @@ type Config struct {
 	Sites []Site `yaml:"sites"`
 }
 
+type SiteStatus struct {
+	Name   string
+	URL    string
+	Status string
+}
+
 func main() {
 	// Load configuration from YAML file
 	config, err := loadConfig("sites.yaml")
@@ -29,13 +35,17 @@ func main() {
 	}
 
 	// Check status of each site
-	statuses := make(map[string]string)
+	statuses := make([]SiteStatus, 0, len(config.Sites))
 	for _, site := range config.Sites {
-		if isSiteUp(site.URL) {
-			statuses[site.Name] = ":green_square:"
-		} else {
-			statuses[site.Name] = ":red_square:"
+		status := SiteStatus{
+			Name:   site.Name,
+			URL:    site.URL,
+			Status: ":red_square:",
 		}
+		if isSiteUp(site.URL) {
+			status.Status = ":green_square:"
+		}
+		statuses = append(statuses, status)
 	}
 
 	// Write result to markdown file
@@ -47,8 +57,8 @@ func main() {
 	// Print result to console if show_output is true
 	show_output := true // Change this to false if you don't want to print to console
 	if show_output {
-		for site, status := range statuses {
-			fmt.Printf("%s: %s\n", site, status)
+		for _, status := range statuses {
+			fmt.Printf("%s: %s\n", status.Name, status.Status)
 		}
 	}
 }
@@ -83,7 +93,7 @@ func isSiteUp(url string) bool {
 	return resp.StatusCode == http.StatusOK
 }
 
-func writeMarkdown(filename string, templateFilename string, statuses map[string]string) error {
+func writeMarkdown(filename string, templateFilename string, statuses []SiteStatus) error {
 	templateData, err := ioutil.ReadFile(templateFilename)
 	if err != nil {
 		return err
