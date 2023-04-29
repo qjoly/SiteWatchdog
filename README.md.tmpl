@@ -57,21 +57,8 @@ You can customize the template used to generate the `README.md` file by creating
 - `{{ $url }}` - the URL of the site
 - `{{ $status }}` - the status of the site (:green_square: for up, :red_square: for down)
 - `{{ $name }}` - the name of the site
-Here is a template you can use:
 
-```markdown
-# Your Project Name
-
-# Description
-
-# Sites
-| Website                 | Status                |
-| ----------------------- | --------------------- |
-{{- range . }}
-| [{{ .Name }}]({{ .URL }}) | {{ .Status }} |
-{{- end -}}
-
-```
+Use the [Example template]() as a starting point.
 
 By default, SiteWatchdog will look for `sites.yaml` and `README.md.tmpl` in the root of your repository. If you need to use a different path, you can set the `SITES_YAML_PATH` and `README_TEMPLATE_PATH` environment variables in your workflow.
 
@@ -89,9 +76,10 @@ SiteWatchdog is released under the MIT License. See `LICENSE` for details.
 
 # Example : 
 
-| Website | Status |
-| ------- | ------ |
+| `Website                | Status                |
+| ----------------------- | --------------------- |
 {{- range . }}
 | [{{ .Name }}]({{ .URL }}) | {{ .Status }} |
 {{- end -}}
+
 
