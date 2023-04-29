@@ -1,6 +1,6 @@
 # SiteWatchdog
 
-SiteWatchdog is a GitHub Action that checks the status of a list of websites and writes the results to a markdown file in your repository. The action is written in Go and uses a YAML file to specify the sites to check.
+SiteWatchdog is a GitHub Action that checks the status of a list of websites and writes the results to the README.md file in your repository. The action is written in Go and uses a YAML file to specify the sites to check.
 
 ## Usage
 
