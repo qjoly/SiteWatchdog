@@ -72,6 +72,6 @@ SiteWatchdog is released under the MIT License. See `LICENSE` for details.
 
 | Website                 | Status                |
 | ----------------------- | --------------------- |
-| [Perdu](https://www.perdu.com) | :green_square: |
-| [MarchePas](https://www.nemarchepascom) | :red_square: |
+| [Blog](https://thebidouilleur.xyz) | :green_square: |
+| [NotWorking](https://NotWorking) | :red_square: |
 | [GitHub](https://www.github.com) | :green_square: |
