@@ -27,7 +27,7 @@ jobs:
       - uses: actions/checkout@main
 
       - name: Run SiteWatchDog
-        uses: qjoly/SiteWatchdog@main
+        uses: QJoly/SiteWatchdog@v0.1.1
         env:
           SITES_YAML_PATH: .github/sites.yaml
           README_TEMPLATE_PATH: .github/README.md.tmpl
