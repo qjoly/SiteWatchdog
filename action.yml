@@ -1,5 +1,5 @@
 name: "SiteWatchDog"
-description: "Simple site watchdog for your README"
+description: "SiteWatchdog is a GitHub Action that checks the status of a list of websites and writes the results to the README.md file in your repository."
 author: "Quentin JOLY"
 inputs:
   README_TEMPLATE_PATH:
