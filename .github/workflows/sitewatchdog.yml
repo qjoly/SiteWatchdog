@@ -9,8 +9,8 @@ jobs:
       - name: Self run
         uses: qjoly/SiteWatchdog@main
         env:
-          SITES_YAML_PATH: .github/sites.yaml
-          README_TEMPLATE_PATH: .github/README.md.tmpl
+          SITES_YAML_PATH: sites.yaml
+          README_TEMPLATE_PATH: README.md.tmpl
         with:
           show_output: false
 
