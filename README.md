@@ -1,3 +1,9 @@
+<p align="center">
+    <img src="https://avatars.githubusercontent.com/u/82603435?v=4" width="140px" alt="QJoly"/>
+    <br>
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=435&lines=SiteWatchDog;Monitor+websites+on+Github;Github+Action+Module" alt="Typing SVG" />
+</p>
+
 # SiteWatchdog
 
 SiteWatchdog is a GitHub Action that checks the status of a list of websites and writes the results to the README.md file in your repository. The action is written in Go and uses a YAML file to specify the sites to check.
