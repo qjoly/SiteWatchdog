@@ -4,12 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
+
       - name: Self test
         id: selftest
-
         # Put your action repo here
-        uses: jacobtomlinson/go-container-action@master
+        uses: qjoly/SiteWatchdog@main
 
       - name: Check outputs
         run: |

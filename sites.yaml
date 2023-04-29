@@ -1,0 +1,7 @@
+sites:
+  - name: Google
+    url: https://www.google.com
+  - name: Facebook
+    url: https://www.facebook.com
+  - name: GitHub
+    url: https://www.github.com

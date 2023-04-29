@@ -1,0 +1,7 @@
+# Website Status
+
+| Website | Status |
+| ------- | ------ |
+{{- range $url, $status := . }}
+| [{{ $url }}]( {{ $url }} ) | {{ $status }} |
+{{- end -}}
