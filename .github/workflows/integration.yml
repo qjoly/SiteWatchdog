@@ -6,9 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@main
 
-      - name: Self test
-        id: selftest
+      - name: Self run
         uses: qjoly/SiteWatchdog@main
+
+      - name: Check If file are modified
+        run: |
+          ls -lah
+          cat README.md
 
       # - name: Check outputs
       #   run: |
