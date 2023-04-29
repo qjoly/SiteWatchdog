@@ -1,7 +1,7 @@
 sites:
-  - name: Google
-    url: https://www.google.com
+  - name: Perdu
+    url: https://www.perdu.com
   - name: Facebook
-    url: https://www.facebook.com
+    url: https://www.nemarchepascom
   - name: GitHub
     url: https://www.github.com
