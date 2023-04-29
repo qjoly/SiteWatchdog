@@ -60,7 +60,7 @@ sites:
 
 By default, SiteWatchdog will look for `sites.yaml` and `README.md.tmpl` in the root of your repository. If you need to use a different path, you can set the `SITES_YAML_PATH` and `README_TEMPLATE_PATH` environment variables in your workflow.
 
-You can use [README-example.md.tmpl](https://github.com/QJoly/SiteWatchdog/blob/main/README-example.md) as a starting point for your README.md file.
+You can use [README-example.md.tmpl](https://github.com/QJoly/SiteWatchdog/blob/main/README-example.md.tmpl) as a starting point for your README.md file.
 
 ## Permissions
 
