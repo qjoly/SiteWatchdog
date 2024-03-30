@@ -46,11 +46,18 @@ changelog:
       - "^test:"
 
 # add gpg
+checksum:
+  name_template: 'checksums.txt'
 
 signs:
-  - artifacts: all
-    args:
-      - --detach-sign
-    cmd: gpg
+  - artifacts: checksum
     ids:
       - 355E36632085C9386A872739FB44D16A0CBA859C
+    args:
+      - "--batch"
+      - "--local-user"
+      - "{{ .Env.GPG_FINGERPRINT }}"
+      - "--output"
+      - "${signature}"
+      - "--detach-sign"
+      - "${artifact}"
